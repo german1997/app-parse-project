@@ -1,0 +1,44 @@
+<div class="row row-margin">
+
+    <div class="col-sm-12 col-md-12 col-lg-5">
+        <label for="exampleFormControlTextarea1" class="form-label">{{txtArea1}}</label>
+        <textarea class="form-control txt-area" id="exampleFormControlTextarea1" [(ngModel)]="txtInput"></textarea>
+        <button type="button" class="btn btn-success mt-2" (click)="parseText()">Convert</button>
+    </div>
+
+    <div class="col-sm-12 col-md-12 col-lg-2 col-opt">
+        <div>
+            <div>
+                <div class="text-center">
+                    <span class="badge bg-secondary">GO</span>
+                </div>
+                <div class="form-check text-center">
+                    <input type="radio" name="rdbOption" id="flexRadioDefault1" value="opt1" [(ngModel)]="optRadio"
+                        (change)="chgOpt()"> Json to Go Struct
+                </div>
+                <div class="form-check text-center">
+                    <input type="radio" name="rdbOption" id="flexRadioDefault1" value="opt2" [(ngModel)]="optRadio"
+                        (change)="chgOpt()"> Go Struct To Json
+                </div>
+            </div>
+
+            <div>
+                <div class="text-center">
+                    <span class="badge bg-secondary">PHP</span>
+                </div>
+                <div class="form-check text-center">
+                    <input type="radio" name="rdbOption" id="flexRadioDefault1" value="opt3" [(ngModel)]="optRadio"
+                        (change)="chgOpt()"> Json to PHP class
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-sm-12 col-md-12 col-lg-5">
+        <label for="exampleFormControlTextarea2" class="form-label">{{txtArea2}}</label>
+        <textarea readonly class="form-control txt-area" id="exampleFormControlTextarea2" [(ngModel)]="txtOutPut"></textarea>
+        <button type="button" class="btn btn-warning mt-2" (click)="downloadFile()">Download File</button>
+    </div>
+
+</div>
